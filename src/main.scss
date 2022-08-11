@@ -1,5 +1,5 @@
-// @import "../node_modules/compass-mixins/lib/compass/reset";
-// @import "../node_modules/compass-mixins/lib/compass/css3";
+@import "../node_modules/compass-mixins/lib/compass/reset";
+@import "../node_modules/compass-mixins/lib/compass/css3";
 
 $color-gray: #d1d1d1;
 $color-green: #00b38a;
@@ -48,7 +48,8 @@ a {
   }
 }
 
-.download-pdf {
+.download-pdf,
+.download-word {
   position: absolute;
   top: 30px;
   left: 50%;
@@ -62,6 +63,9 @@ a {
   @media print {
     display: none;
   }
+}
+.download-word {
+  margin-left: -440px;
 }
 
 .content {
@@ -304,6 +308,10 @@ a {
   }
   .item-bd {
     margin-bottom: 5px;
+    li {
+      white-space: normal;
+      word-break: break-all;
+    }
   }
   .item-des {
     margin-bottom: 16px;
@@ -373,5 +381,11 @@ a {
 
   @media print {
     display: none;
+  }
+}
+
+.certificate {
+  img {
+    width: 100%;
   }
 }
